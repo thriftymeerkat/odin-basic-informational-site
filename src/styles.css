@@ -1,0 +1,97 @@
+:root {
+    --padding: 20px;
+    --blue: #9FA0FF;
+    --black: #1F1F1F;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: var(--blue);
+    padding: var(--padding);
+}
+
+main {
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+    padding-bottom: var(--padding);
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav a {
+    color: var(--black);
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav > div {
+    font-size: 1.5rem;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    list-style: none;
+    text-align: center;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-container,
+.page-not-found-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.contact-container a {
+    color: var(--black);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-container a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (min-width: 768px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    ul {
+        flex-direction: row;
+        gap: 1rem;
+    }
+}

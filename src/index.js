@@ -27,6 +27,19 @@ const server = http.createServer(function(req, res) {
                 }
             });
             break;
+        
+        case '/styles.css':
+
+            fs.readFile('src/styles.css', function(error, data) {
+                if (error) {
+                    res.writeHead(404, { 'Content-Type': 'text/plain' });
+                    res.end('404 - File Not Found!');
+                } else {
+                    res.writeHead(200, { 'Content-Type': 'text/css' });
+                    res.end(data);
+                }
+            });
+            break;
 
         default:
             fs.readFile('src/404.html', function(error, data) {
