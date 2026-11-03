@@ -31,14 +31,17 @@ nav {
     gap: 1rem;
 }
 
-nav a {
+nav a,
+.page-not-found-container a {
     color: var(--black);
     font-weight: bold;
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-nav a:hover {
+nav a:hover,
+.contact-container a:hover,
+.page-not-found-container a:hover {
     text-decoration: underline;
 }
 
@@ -74,14 +77,11 @@ p {
     gap: 1rem;
 }
 
-.contact-container a {
+.contact-container a,
+.page-not-found-container a {
     color: var(--black);
     font-weight: bold;
     text-decoration: none;
-}
-
-.contact-container a:hover {
-    text-decoration: underline;
 }
 
 @media only screen and (min-width: 768px) {
